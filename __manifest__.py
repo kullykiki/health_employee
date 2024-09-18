@@ -10,27 +10,20 @@
         Long description of module's purpose
     """,
 
-    'author': "My Company",
-    'website': "http://www.yourcompany.com",
+    'author': "Kully",
+    'website': "http://www.kully.com",
 
-    # Categories can be used to filter modules in modules listing
-    # Check https://github.com/odoo/odoo/blob/master/odoo/addons/base/module/module_data.xml
-    # for the full list
     'category': 'Uncategorized',
     'version': '0.1',
     'license': 'LGPL-3',
-
-    # any module necessary for this one to work correctly
-    'depends': ['base','hr'],
-
-    # always loaded
+    'depends': ['base','hr','web'],
+    'assets': {
+        'web.assets_backend': [
+            'health_employee/static/src/**/*'
+        ]
+    },
     'data': [
-        # 'security/ir.model.access.csv',
         'views/views.xml',
         'views/templates.xml',
-    ],
-    # only loaded in demonstration mode
-    'demo': [
-        'demo/demo.xml',
     ],
 }

@@ -22,7 +22,7 @@
             <xpath expr="//page[@name='hr_settings']" position="after">
               <page name="health_emp" string="Health">
                 <group>
-                  <field name="health_employee"/>
+                  <field name="health_employee" widget="numberic_field" />
                 </group>
               </page>
             </xpath>
